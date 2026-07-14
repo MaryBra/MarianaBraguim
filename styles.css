@@ -653,17 +653,13 @@ a {
 
 .browser-open:hover { color: var(--purple); }
 
-.iframe-wrap {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 4/3;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  background: var(--bg);
-}
+@media (max-width:768px){
 
-@media (min-width: 768px) {
-  .iframe-wrap { aspect-ratio: 16/10; }
+    .iframe-wrap{
+        aspect-ratio:9/16;
+        min-height:70vh;
+    }
+
 }
 
 .iframe-wrap iframe {
@@ -974,4 +970,42 @@ a {
   font-family: var(--font-script);
   font-size: 1.25rem;
   color: var(--lavender);
+}
+
+
+@media (max-width: 768px) {
+
+  .browser-header{
+    padding-bottom: .5rem;
+    gap: .5rem;
+  }
+
+  .url-bar{
+    min-width: 0;
+    margin: 0 .5rem;
+    padding: .35rem .75rem;
+    font-size: .65rem;
+  }
+
+  .url-https{
+    display:none;
+  }
+
+  .browser-open{
+    width:32px;
+    height:32px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+  }
+
+  .browser-dots{
+    gap:.3rem;
+  }
+
+  .dot{
+    width:.55rem;
+    height:.55rem;
+  }
+
 }
